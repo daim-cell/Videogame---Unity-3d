@@ -1,10 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
 public class ship : MonoBehaviour
 {
+    bool ColliderShip = true;
+
     [SerializeField] float xmov = 20f;
     [SerializeField] float xspeed = 17f;
 
@@ -26,14 +29,22 @@ public class ship : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        xMovement();
+        if (ColliderShip)
+        {
+            xMovement();
 
-        yMovement();
+            yMovement();
 
-        float pitch = transform.localPosition.y + yThrow*controlpitch;
-        float yaw= transform.localPosition.x ;
+            rotations();
+        }
+    }
+
+    private void rotations()
+    {
+        float pitch = transform.localPosition.y + yThrow * controlpitch;
+        float yaw = transform.localPosition.x;
         float roll = xThrow * controlroll;
-        transform.localRotation = Quaternion.Euler(-pitch,yaw,roll);
+        transform.localRotation = Quaternion.Euler(-pitch, yaw, roll);
     }
 
     private void yMovement()
@@ -53,4 +64,10 @@ public class ship : MonoBehaviour
         float xrnge = Mathf.Clamp(xnew, -xmov, xmov);
         transform.localPosition = new Vector3(xrnge, transform.localPosition.y, transform.localPosition.z);
     }
+
+    void disable()
+    {
+        ColliderShip = false;
+    }
+
 }

@@ -8,7 +8,9 @@ public class Load : MonoBehaviour
 {
     void Awake()
     {
-        
+        int num = FindObjectsOfType<Load>().Length;
+        if (num > 1) Destroy(this.gameObject);
+        else
         DontDestroyOnLoad(this.gameObject);
     }
 
