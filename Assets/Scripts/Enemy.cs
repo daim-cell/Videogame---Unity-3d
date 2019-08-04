@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] GameObject Explosion;
-    [SerializeField] float Loaddelay = 1f;
+   
 
     private void Death()
     {
@@ -19,8 +19,9 @@ public class Enemy : MonoBehaviour
 
     void OnParticleCollision(GameObject other)
     {
-        Explosion.SetActive(true);
-        Invoke("Death", Loaddelay);
+        Instantiate(Explosion, transform.position, Quaternion.identity);
+
+        Death();
     }
     // Update is called once per frame
     void Update()
