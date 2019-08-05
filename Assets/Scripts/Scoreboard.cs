@@ -13,9 +13,9 @@ public class Scoreboard : MonoBehaviour
         scoreboard = GetComponent<Text>();
         scoreboard.text = score.ToString();
     }
-    public void Hit()
+    public void Hit(int shipscore)
     {
-        score += 10;
+        score += shipscore;
         scoreboard.text = score.ToString();
     }
 

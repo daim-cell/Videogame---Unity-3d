@@ -17,6 +17,8 @@ public class ship : MonoBehaviour
     [SerializeField] float controlpitch = 10f;
     [SerializeField] float controlroll = 14f;
 
+    [SerializeField] GameObject[] guns;
+
     private float xThrow;
     private float yThrow;
 
@@ -36,6 +38,27 @@ public class ship : MonoBehaviour
             yMovement();
 
             rotations();
+
+            firing();
+        }
+    }
+
+    private void firing()
+    {
+        if (CrossPlatformInputManager.GetButton("Fire1"))
+        {
+            foreach(GameObject gun in guns)
+            {
+                gun.SetActive(true);
+            }
+        }
+        else
+        {
+            foreach (GameObject gun in guns)
+            {
+                gun.SetActive(false);
+            }
+
         }
     }
 

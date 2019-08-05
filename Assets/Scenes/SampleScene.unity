@@ -250,6 +250,9 @@ MonoBehaviour:
   yspeed: 12
   controlpitch: 10
   controlroll: 14
+  guns:
+  - {fileID: 115922912}
+  - {fileID: 1121259591}
 --- !u!23 &79205244
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -377,7 +380,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &115922913
 Transform:
   m_ObjectHideFlags: 0
@@ -5663,7 +5666,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1121259592
 Transform:
   m_ObjectHideFlags: 0
@@ -10729,6 +10732,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 1526196327, guid: b0ce957757f689449b916c7323e244c3, type: 3}
+      propertyPath: shipscore
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0ce957757f689449b916c7323e244c3, type: 3}
 --- !u!4 &1640173573853991917 stripped
@@ -11072,6 +11079,10 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 836117949, guid: 5e3696cf6151b384b928aad77c1f483c, type: 3}
+      propertyPath: shipscore
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e3696cf6151b384b928aad77c1f483c, type: 3}
