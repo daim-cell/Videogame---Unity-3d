@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 2198686718268482079}
   - component: {fileID: 1526196327}
   - component: {fileID: 7224660701844277096}
+  - component: {fileID: 7383089208727457926}
+  - component: {fileID: 8822949502562943446}
   m_Layer: 0
   m_Name: Ship_08 Variant
   m_TagString: Untagged
@@ -28,13 +30,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1641989096296264025}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: -0.7071068}
-  m_LocalPosition: {x: 269.19034, y: 142.3, z: 111}
-  m_LocalScale: {x: 50.00003, y: 50, z: 50.00003}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 255, y: 22.7, z: 149.5}
+  m_LocalScale: {x: 50, y: 50, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 180, y: -90, z: 180}
+  m_LocalEulerAnglesHint: {x: 180, y: 90, z: 180}
 --- !u!33 &1637785516571535181
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -107,7 +109,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Explosion: {fileID: 1560126216833568153, guid: 57de0f89951446f4cb379cc4e24e928e,
     type: 3}
-  Loaddelay: 1
+  shipscore: 10
+  hit: 3
 --- !u!64 &7224660701844277096
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -122,3 +125,45 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300012, guid: ec2ed6fafcc53c64ba923b9ef7d5749f, type: 3}
+--- !u!320 &7383089208727457926
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641989096296264025}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 59279581bb0657f43a44570fc362295a, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 6982548775882625582, guid: 59279581bb0657f43a44570fc362295a, type: 2}
+    value: {fileID: 8822949502562943446}
+  - key: {fileID: 5500189424712175491, guid: 59279581bb0657f43a44570fc362295a, type: 2}
+    value: {fileID: 8822949502562943446}
+  - key: {fileID: -6088399074164149799, guid: 59279581bb0657f43a44570fc362295a, type: 2}
+    value: {fileID: 8822949502562943446}
+  m_ExposedReferences:
+    m_References: []
+--- !u!95 &8822949502562943446
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641989096296264025}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
