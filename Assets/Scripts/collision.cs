@@ -15,8 +15,8 @@ public class collision : MonoBehaviour
 
     private void Death()
     {
-        SendMessage("disable");
-        
-        SceneManager.LoadScene(1);
+        //SendMessage("disable");
+        print("you touched");
+        //SceneManager.LoadScene(1);
     }
 }  
